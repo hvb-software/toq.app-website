@@ -1,14 +1,14 @@
+name: deploy to FTP
 on: push
-name: deploy to FTP server
 jobs:
   deploy:
-    name: deploy
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: upload-to-FTP
-      uses: sebastianpopp/ftp-action@releases/v2
+    - uses: actions/checkout@v1
+    - name: git-ftp push
+      uses: sebastianpopp/git-ftp-action@releases/v3
       with:
-        host: ${{ secrets.FTP_SERVER }}
+        url: ${{ secrets.FTP_SERVER }}
         user: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
