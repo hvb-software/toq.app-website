@@ -1,8 +1,8 @@
-name: deploy to FTP
+name: deploy to FTP server
 on: push
 jobs:
   deploy:
-    name: Deploy
+    name: deploy
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
