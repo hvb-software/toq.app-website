@@ -3,5 +3,5 @@
 */.gitkeep
 .git-ftp-ignore
 .git-ftp-include
-.github
+.github/*
 README.md
